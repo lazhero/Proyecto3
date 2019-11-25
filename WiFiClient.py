@@ -109,7 +109,7 @@ class NodeMCU(Thread):
                         new_log[1] = str(error)
                     #Error de tipo distinto a timeout  
                     except Exception as a:
-                        print(str(a))
+                        print("asdasdas")
                         print("No se pudo conectar con el servirdor\nVerifique que ambos dispositivos están conectados y en la misma red")
                         self.error=True
                         self.error_list.append(a)
@@ -120,7 +120,7 @@ class NodeMCU(Thread):
                         
                 #No se pudo conectar con el servidor          
                 except Exception as e:
-                    print(str(e))
+                    print("TimeOut")
                     self.error=True
                     self.error_list.append(e)
                     new_log[1] = str(e)
